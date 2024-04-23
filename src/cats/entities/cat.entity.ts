@@ -1,4 +1,4 @@
-import { Column, Entity } from 'typeorm';
+import { Column, DeleteDateColumn, Entity } from 'typeorm';
 
 @Entity()
 export class Cat {
@@ -10,4 +10,6 @@ export class Cat {
   age: number;
   @Column()
   breed: string;
+  @DeleteDateColumn()
+  deletedAt: Date;
 }
